@@ -1,0 +1,49 @@
+* Today/Tomo
+** Ask/Do
+*** Jimmy 4PCS
+** Call/Email
+*** MGA
+*** Sahil Katti
+** Learn
+*** R, Datacamp
+** Analyse
+** Write
+*** PMH report
+** Read
+*** A K Henry
+*** Prox tibia GMRS
+* Learn
+** R , Biostats form datacamp
+** Statistics 
+
+* Analyse
+** CSA data
+
+* Write
+** Papers
+*** TODO Autoreg
+*** TODO TRE maps and phantom study
+*** TODO Amir ISO plain data analysis
+*** TODO CSA
+*** TODO Leapy
+*** TODO Trial data with NASA analysis
+* Read
+** Anatomy
+*** TODO Read Henry subgluteal hip approach 
+   DEADLINE: <2016-02-02 Tue 16:00> SCHEDULED: <2016-02-02 Tue>
+*** TODO Anterior femur and popliteal
+   SCHEDULED: <2016-02-03 Wed 22:00>
+*** TODO Back of thigh and leg posterior leg
+   SCHEDULED: <2016-02-02 Tue 21:00>
+*** TODO Datacamp revision on cleaning data and finish Conway tutorials1 :ATTACH:
+   SCHEDULED: <2016-02-02 Tue 15:00>
+*** TODO Propensity scores and Competing risk analysis
+** Sarcoma reading
+*** TODO GMRS Prox tibia
+*** TODO Cementing technique
+*** TODO PET in sarcoma frm MGA email review
+
+* Emacs
+** TODO Learning capture and agenda modes
+** TODO learning hyperlinks and cross ref
+** TODO email setup on emacs

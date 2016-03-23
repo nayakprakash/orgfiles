@@ -1,0 +1,16 @@
+* TODO Read Henry subgluteal hip approach 
+  DEADLINE: <2016-02-02 Tue 16:00> SCHEDULED: <2016-02-02 Tue>
+* TODO BMD report reading 
+  DEADLINE: <2016-02-02 Tue 17:00>
+* TODO GMRS distal femur 
+  DEADLINE: <2016-02-02 Tue 15:00>
+* TODO Org ref install 
+  SCHEDULED: <2016-02-02 Tue 14:00>
+* TODO Anterior femur and popliteal
+  SCHEDULED: <2016-02-03 Wed 22:00>
+* TODO Back of thigh and leg posterior leg
+  SCHEDULED: <2016-02-02 Tue 21:00>
+* TODO Amir study planning 
+  SCHEDULED: <2016-02-02 Tue 13:00>
+* TODO Datacamp revision on cleaning data and finish Conway tutorials
+  SCHEDULED: <2016-02-02 Tue 15:00>

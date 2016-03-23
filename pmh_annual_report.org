@@ -1,0 +1,11 @@
+Over the past 8 to 10 months the sarcoma wing of the GTx
+guided therapeutics program translated the use of the custom
+navigation and planning  platform to the OR for the first clinical
+trial on patients with benign extremity bony tumors as a stepping
+stone toward its use for more complex pelvi-sacral sarcoma surgeries. This
+involved innovating  novel tool design and workflow to allow seamless automatic registration leveraging on the intra-operative robotic cone beam CT
+.The technology has a widespread application to the registration
+paradigm across all disciplines. 
+Target registration Error (TRE) colormap is a dynamic, real time intuitive interface that helps predict, visualize and control the distribution of these errors to best suit the requirements of their surgical plan. This is a first of its kind depiction of the errors in the registration process in a transparent and meaningful manner not available with any propietary commercial platform. This is value to the entire global community of navigation users, majority of whom do not use intraoperative CT to help them plan fiducial placement for accurate surgery.This tool has been clinically used as a part of the trial to validate the registration process.
+We have also successfully deployed simultaneous multi-tool registration(pointed tools like a burr and planar cutting tools like a saw or osteotome) for seamless use during surgery. 
+Another innovation called 'Leapy' uses gesture control to help a gloved surgeon manipulate, twist, turn, scroll through CT/MR navigation images for best visualization while remaining 'sterile' because there isn't a 'Thing explainer' yet to convey in easy words 'where the acetabular fovea cuts through the quadrilateral plate'! This aims to avoid redundant conversations and improved efficiency through the silence of gestures. 
