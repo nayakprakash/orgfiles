@@ -1,12 +1,52 @@
 # \bibliography{~/research/todo/bibtest}
-* Osteosarcoma 
+* Osteosarcoma
 ** Low grade cite:Righi2015                            :lowgradeogs:rizzoli:
 of 20 low grade ogs with <50% high grade areas, 11 got chemo and 9 did
 not, bth did equally good. Fibroblastic hight grade (vis a vis
 osteblastic in conventional ogs) were more common. And mean age was
 also higher. Final recommendation was no chemo if high grade area <50
 % according to Broder's grading.
+** Amutation vs Salvage
+Need a sensitive and specific pre op predictor of response and a
+randomization of borderline salvageable cases into amputation vs
+salvage for a direct answer.(Kumta, JBST,2016). Would early amputation
+of large volume disease improve their survival?
+** Margins in OGS
+** PET in OGS
+cite:hongtao2012
+SUV<=2.5 or SUV 2/1<= 0.5 good prognostic factor
+*** JBST Rangarajan
+Role in staging :90 % vs 81% sensitivity in pickup of bone mets
+95 vs 25 for lymph node mets
+More sensitive than MDP bone scan for peri metaphyseal mets
+Role in response assessment :Kinetic data or dynamic PET
+** Chemo in OGS
+**
+cite:bajpai2014 Kapoor in JBST
+*** stage 1:
+improving survival: CONPADRI and COMPADRI 1 to 3,T7 Rosen, Eilber
+*** Stage 2 :
+consoloditaing the role of NACT: T10,MIOS
+POG8651 compared NACT to post op chemo with no change in PFS or rate
+of LSS
+*** stage 3 :
+Necrosis predicting  prognosis IOR, COSS, EOI
+*** stage 4:
+Intensifying necrosis COSS 86, T12 showing better necrosis but same
+survival.
+INT-0133 only trial to show benefit
+*** stage 5:
+Intra arterial : cisplatin, benefit with fractures or NV involvement,
+but only temporal , not qualitative
+*** stage 6: Non HD Mtx
+St Jude, Pathak et al, Bajpai et al not worse.
+No head to head randomised comparison to HD MTx
+*** cell surface antigen​ on OGS cells ALCAM hybrid polymerized liposomal nanoconjugate
+*** thiotepa and ASCT in relapsed OGS had 40 % OS at 3Y and 25 % PFS
 
+** RT in OGS
+Stanford Cade 1931 100 % necrosis 60 Gy over 6 weeks
+70 Gy in 8 weeks for Pelvic and Head and NEck OGS
 * Pallaitive care papers	       :palliative:incurable:cancer:survival:
 ** Delivering bad news						    :badnews:
 SPIKES Setting Perception Invitation Knowledge Empathy Strategy and
@@ -16,4 +56,23 @@ goals of care,if disase incurable survival estimate and magnitude of
 treatment benefit.early and prompt referral to palliative care.
 ** Why patients leave
 The patients described an ideal physician as someone who is confident, empathetic, humane, personal, forthright, respectful, and thorough.
-** 
+**
+* Soft Tissue Sarcoma
+** Synovial Sarcoma
+*** Bob Maki Study
+despite NY ESO + cancer testis antigen Iplimumab had no activity in
+Synovial Sarcoma specimens
+** Eribulin vs Dacarbazine trial:
+cite:schoffski16
+OS benefit of 2 mo (13.5 vs 11.5) in a young(median age 56), fit (ECOG
+0/1 in 96%) At design stage OS of Dacarbazine
+group was underestimated to be at 6 mo.The survival in both groups was
+better than expected.This was an unusual trial because OS instead of PFS being end point.
+Most new trials have used PFS as a surrogate for OS. This trial showed
+no diff in PFS but better OS. This was attributed to changes in tumor
+vascularisation,metastatic potential and microenvironment changes.
+This also suggest that Eribulin enhances response to sbsequent chemo,
+as similar result have been seen with breast cancer.
+Does this call into question if the trials using PFS were undercalled?
+How does the decision of PFS vs OS before design change suddenly
+change ou conclusions when the effect seen is on the same set of patients?
