@@ -1,4 +1,5 @@
 # \bibliography{~/research/todo/bibtest}
+* Genome landscape in OS and ES
 * Osteosarcoma
 ** Low grade cite:Righi2015                            :lowgradeogs:rizzoli:
 of 20 low grade ogs with <50% high grade areas, 11 got chemo and 9 did
@@ -12,6 +13,7 @@ randomization of borderline salvageable cases into amputation vs
 salvage for a direct answer.(Kumta, JBST,2016). Would early amputation
 of large volume disease improve their survival?
 ** Margins in OGS
+** LR
 ** PET in OGS
 cite:hongtao2012
 SUV<=2.5 or SUV 2/1<= 0.5 good prognostic factor
@@ -47,17 +49,46 @@ No head to head randomised comparison to HD MTx
 ** RT in OGS
 Stanford Cade 1931 100 % necrosis 60 Gy over 6 weeks
 70 Gy in 8 weeks for Pelvic and Head and NEck OGS
-* Pallaitive care papers	       :palliative:incurable:cancer:survival:
-** Delivering bad news						    :badnews:
-SPIKES Setting Perception Invitation Knowledge Empathy Strategy and
-summary[[ http://www.medscape.com/viewarticle/856955_2?nlid=98266_944][link]
-** Terminal care		  :terminalcare:survival:estimate:palliative:
-goals of care,if disase incurable survival estimate and magnitude of
-treatment benefit.early and prompt referral to palliative care.
-** Why patients leave
-The patients described an ideal physician as someone who is confident, empathetic, humane, personal, forthright, respectful, and thorough.
-**
-* Soft Tissue Sarcoma
+
+* Ewing Sarcoma
+** Neoadjuvant Rads in Central ES
+* Chondrosarcoma
+* History of Megaprosthesis                              :history:prosthesis:
+Cosmos and Damian 3rd Century AD
+John Scales 1952 First articulated prosthesis for distal femur Csarc
+* Infection in megaprosthesis
+* Silver coated prosthesis
+Agluna process, silver absorbed on anodized Ti oxide surface oits,
+which are imperfections due to machinations or grain boundaries.Silver
+with Ti is static for Pseudomonas and MRSA, cidal for epidermidis
+,pyogenes and E coli.
+* Prosthesis in Kids  Expandable and Other
+Epicyclic gearbox 21.5 x 18.5  
+Speed reduction 13061:1  
+1350 N axial load  
+3000 rom leads to 0.23mm per min  
+
+Usually indicated in 12 or younger. In >12 smooth tibial fixed hinge
+component may preserve some tibial physeal growth.
+
+** Tibia issues with expandable: 
+Use of rotating hinge with magnetic expandable caused medial tibial
+condyle arrest and progressive loosening in over 50 % of
+cases.MarcoManfrini et al.
+
+** Femur issues with expandable :
+bone resorption with cemented and uncemented leading to revision with
+press for smooth stems with tubular allograft for lengthening the
+resorbed segment or with HA collar and smooth press fit stem (preferred)
+
+* Autografts                      :irradiation:ecrt:morphometry:ihc:strength:
+Autoclave, pasteurized,Liquid N2 or Irradiation
+Irradiated Bone : Dead, weak , no margins , no necrosis. Loss of
+strength is 9 % compared to 50 % with liquid N2 and 34 % with
+autoclaving
+Strength evaluated with Morphometric analysis using Fibroblast number
+and collagen fibril thickness and IHC with COl1, Ki 67, p53, Caspase 3.
+* Soft tissue sarcoma
 ** Synovial Sarcoma
 *** Bob Maki Study
 despite NY ESO + cancer testis antigen Iplimumab had no activity in
@@ -76,3 +107,27 @@ as similar result have been seen with breast cancer.
 Does this call into question if the trials using PFS were undercalled?
 How does the decision of PFS vs OS before design change suddenly
 change ou conclusions when the effect seen is on the same set of patients?
+* Benign Bone
+* Benign Soft
+* Metastasis 
+* Palliation                           :palliative:incurable:cancer:survival:
+** Delivering bad news						    :badnews:
+SPIKES Setting Perception Invitation Knowledge Empathy Strategy and
+summary[[ http://www.medscape.com/viewarticle/856955_2?nlid=98266_944][link]
+** Terminal care		  :terminalcare:survival:estimate:palliative:
+goals of care,if disase incurable survival estimate and magnitude of
+treatment benefit.early and prompt referral to palliative care.
+** Why patients leave
+The patients described an ideal physician as someone who is confident, empathetic, humane, personal, forthright, respectful, and thorough.
+**
+* Pearls of wisdom from Frank Sim
+1. Adhere to basic
+2. Appropriate suspicion
+3. Accurate Diagnosis
+4. Avoid biopsy pitfalls
+5. Planning
+6. Teamwork
+7. Innovation
+8. Rehabilitation
+9. Leran from Mistakes
+10. Treasure succeses

@@ -1,0 +1,23 @@
+* Weighted gene co-expression network analysis
+https://www.youtube.com/watch?v=rRIRMW_RRS4
+On a heat map, aim is pull out clusters of genes that are consistently
+upregulated or downregulated and thus can be analysed as fewer modules
+instaed of doing a p value on all genes/ rows of the heat map
+data. (so that one does not miss the forest for the trees.)This is a
+systems biologic method.
+* Soft thresholding of correlaton
+matrices and adjacency matrices to mimic biology: signed vs unsigned networks (for negatively correlated genes unsigned correlations may be better)
+
+for small samples doing co expression networks with correlation
+coefficients is intuitive and avoids pitfalls of overfitting.They are
+computationally fast and works well in practise. Spearman coefficients
+define monotonic relationship and ranking of data , makes it too
+robust and you lose data.
+** Pearson you lose less data. The best of both
+is Biweight mid correlation , a robust alternative. Based on median
+instead of mean. Robust to outliers as .
+** Comparison of co-expression measures:
+Mutual information , correlation and model based indices, which is
+better. Song et al 2012 BMC Bioinformatics PMID :23217028 shows
+biweight midcorrelation + topological overlap works best to define
+co-expression modules for GO (gene ontology) terms
