@@ -21,3 +21,27 @@ Mutual information , correlation and model based indices, which is
 better. Song et al 2012 BMC Bioinformatics PMID :23217028 shows
 biweight midcorrelation + topological overlap works best to define
 co-expression modules for GO (gene ontology) terms
+** Soft thresholding
+preserves continuous information and is more robust with different
+threshold choices. Also allows calibration of different networks and
+various databases eg lung cancer data from caucasian, japanese, rnaSeq
+and other databases, quite like normalizing data.
+** gene connectivity
+row sum of the adjacency matrix, or sum of weighted networks. Scale
+free topology, straight line relationship between log10p(k) which is
+the frequency and log10k (which is connectivity). It is similar to
+looking at R^2 from pearson.
+** Most single tissues exhibit scale free topology
+which is why we want to see scale free topology at low powers like 6
+or 7 for unsigned and 12 for signed. If one has small samples and does
+not have a scale free topology one begins to worry about technical or
+data issues, is there an outlier, is there a problem with a batch of
+tissue arrays?
+Some times these correlation patterns which do not satisfy scale free
+topology could be good biological causes, like when one compares liver
+and fat, so modules could be very large in both tissue sets.So if one
+has modules with 1000 genes or 1000 hubs, one may never get actual
+scale free topology.
+** Measuring interconnectedness in network
+1. adjacency matrix
+2. topological overlap matrix

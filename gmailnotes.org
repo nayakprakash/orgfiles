@@ -1,0 +1,741 @@
+* Way to be
+I​​n the now
+Physically fit
+Act like a spy
+Write like a journalist
+Breathe
+* R practise
+
+http://tutorials.iq.harvard.edu/R/Rgraphics/Rgraphics.html
+
+https://rpubs.com/f_ermark/99912
+* Github and Emacs
+
+https://try.github.io/levels/1/challenges/4
+
+above is amazing for newbies like me
+#git for dropbox
+
+I think that Git on Dropbox is great. I use it all of the time. I have multiple computers (two at home and one at work) that I use Dropbox as a central bare repository. Since I don't want to host it on a public service, and I don't have access to a server that I can always ssh to, Dropbox takes care of this by syncing (very quickly) in the background.
+
+Setup is something like this:
+
+~/project $ git init
+~/project $ git add .
+~/project $ git commit -m "first commit"
+~/project $ cd ~/Dropbox/git
+
+~/Dropbox/git $ git init --bare project.git
+~/Dropbox/git $ cd ~/project
+
+~/project $ git remote add origin ~/Dropbox/git/project.git
+~/project $ git push -u origin master
+From there, you can just clone ~/Dropbox/git/project.git that you have associated with your Dropbox account (or have shared this directory with people), you can do all the normal Git operations and they will be synchronised to all your other machines automatically.
+
+# git for emacs
+
+http://emacs.stackexchange.com/questions/7826/is-there-a-simplified-version-control-system-appropriate-for-non-coders-writing
+
+add environment variables before running shell command for git init etc. Or else emacs shall not recognize git.
+
+# added this to .emacs for environment variable
+(setq explicit-shell-file-name
+      "C:/Program Files (x86)/Git/bin/bash.exe")
+(setq shell-file-name explicit-shell-file-name)
+(add-to-list 'exec-path "C:/Program Files (x86)/Git/bin")
+Summary
+From the shell:
+
+git init: Initialize git repository in current directory
+From any file or directory associated with a git repository:
+
+M-x magit-status RET
+From the status buffer:
+
+s to add new files or stage changes
+
+c c to commit staged changes
+
+C-c C-c to finalize commit
+C-c C-k to abort commit
+l l to view commit logs
+That's it. :)
+
+# The leanest best beginners guide to github
+
+http://rogerdudler.github.io/git-guide/
+
+# The link below gives the basic commands on bash to clone and add upstream sync to online master repo.
+
+https://github.com/GarageGames/Torque2D/wiki/Cloning-the-repo-and-working-with-Git
+
+
+http://readwrite.com/2013/09/30/understanding-github-a-journey-for-beginners-part-1
+
+# comprehensive list of all git commands
+
+https://www.kernel.org/pub//software/scm/git/docs/
+
+
+#To clone a repo I typed this in git bash:
+
+$ git clone git://github.com/jwiegley/use-package.git
+
+The file got cloned into a folder called 'usepackage' under C:/Nayakprakash folder(likely the default clone folder for git config, may be because I specified my name and user id in the global config). You may them cut-paste the folder to your desired location.(in this case the .emacs.d folder)
+
+#The other way to clone into a specified dir is as below: since the default working  dir is nayakp, git clone clones it to that folder, this is how you would clone it to a seperate folder
+cd ~/.emacs.d
+mkdir src
+cd src
+git clone git://orgmode.org/org-mode.git
+#(so this git is cloned to src dir under .emacs.d)
+#IMPORTANT : to have your local repo continuously synced with the github master to   have any updates or changes reflected automatically in your local repo you need to   give a seperate local remote name: I gave 'pakyababel' for by babel org repo, note   that the default name for the remote is 'origin', unless you change it like I did to 'pakyababel'. This is how it looks inside gitbash
+nayakp@ET MINGW64 ~/.emacs.d/src (master)
+$ git remote add pakyababel https://orgmode.org/org-mode.git
+$ git remote -v is the command to check what your remote names are. The output is as below.
+nayakp@ET MINGW64 ~/.emacs.d/src (master)
+$ git remote -v
+origin  git://github.com/kjhealy/emacs-starter-kit (fetch)
+origin  git://github.com/kjhealy/emacs-starter-kit (push)
+pakyababel      https://orgmode.org/org-mode.git (fetch)
+pakyababel      https://orgmode.org/org-mode.git (push)
+
+nayakp@ET MINGW64 ~/.emacs.d/src (master)
+
+
+
+#First go to tools-> version control-> git/svn-> select git and path to git.exe under a bin file looks like this
+
+C:/Users/nayakp/AppData/Local/Programs/Git/bin/git.exe
+
+Then open a new project->new directory->empty project->give path to a new directory and check the box that says create a new git repository->ok
+
+This should open a new git tab besides "environment" and "history"
+
+This means git and R studio are speaking to each other.
+
+Then delete this project.
+
+Now create a repository in GitHub online with a readme file option checked and copy the URL of your repository.
+
+Now open a new project->existing version control repository->select GIT->paste the URL of your repository->give it a name and a subdirectory(I prefer to keep the subdirectories in the R working directory which I call Rspace, but this is not a must), say OK and you should see the GIT tab as earlier.
+
+Now lets say you created a new CSA.R file(like I did for chondrosarc data analysis), once you save the .R files they will appear in your git environment, now click commit after selecting the files you want to commit, this will open a new git window which will paint your selected files to commit in green, after you have added a comment to this file press commit again.
+
+Alternatively you could clone a local repo, sync it upstream with a remote name and then open that inside R studio as a new version controlled project.
+The advantage to push commits to a main online master repo is that you will get the updated version of you analysis code assuming you work at home and office or lab, so all remain synced across the board every-time without you having to do anything special other than commit and push each time. The remote upstream sync that you have set will continue doing the syncing work in the background. Amazing isn't it?!
+
+These files would now disappear from the pane, don't worry, these are committed but not pushed yet, now press push and it will prompt for username and password of your github account.
+
+Once you fill those, you are good.
+
+Now go online to your github account and check if files have synced.
+
+One could also have a github clone on the desktop which shall show you the same output.
+
+Kudos! Your version control is set and ready to go!
+
+* chooseCRANmirror(graphics=F)
+20 for Canada, 48 for India
+for installing packages in Org mode
+
+* Paper writing workflow​
+Map structure of the paper : Org headings and sub-headings and fill fuzzy details in each. Basically get a flow for the paper
+
+
+​​https://sbseminar.wordpress.com/2008/06/18/subverting-the-system/
+
+​
+https://terrytao.wordpress.com/advice-on-writing-papers/write-a-rapid-prototype-first/​
+For each section have a focused point to make or question you want to ask  to guide reference hunting.
+Look for references in scholar, update .bib and pdf names 5 at a time
+Now read what has been hunted ; Cite and write in Org may be in scratch while reading the paper in a standalone pdf reader
+Cross-references from the parent ref can be mentioned as you write. Do accurate bib referencing later. Install chrome scholar toolbar for help.​
+
+​Export to tex, pandoc to work or google doc​
+One mega org doc
+
+Sub headings of individual manuscripts
+
+YAML on top
+
+Bib file and style on top, so it's easy to cut paste to a new piece
+
+All figures cited from one folder (may be called figures, so that all Figs with meaningful labels are dumped into same folder, this makes citing them in each piece easy)
+
+All pdfs labeled as last name and 4 digit year, like their bibtex key. This makes future searching easier.
+
+Pipe org or tex to pandoc to get docx.
+
+Learn later on how to write books/footnotes.
+
+* When Unmotivated​​
+Focus focus and focus on what the niggling problem is
+
+Remember that you enjoy writing, recall what Robert A Caro or Judt would do, what Siddhartha Mukherjee would when they don't wanna write. Start writing anytime, anywhere, whenever you can.
+
+You can read anytime anywhere, extend that to writing or analysing.
+
+Recall R and Emacs
+
+Walk lots
+Stay in the now stubbornly
+Don't let go of your mind
+
+Work on your core, neck, arms and grip
+
+That's mind and body.
+
+* How to go about a Research paper
+hats the research question? What model/formulae likely to need ?
+
+How do you get the data ?
+
+What are columns in data frame one would need? Factored ?
+
+Is the data clean?
+
+Are columns in the correct format?
+
+Are the NA values handled ?
+
+If yes to all of the above plug them into an R formula have results
+
+Never let the computer do the thinking for you. Plot data, think about a model, fit the model,plot the model, explain the model.
+
+
+Plot them, label them and write the paper.
+
+Project Outline : A narrative of what images/charts/plots you would use for the paper results to make you point.
+
+Build the project around these.
+
+* Daily Rule
+​Meditate : morning
+Exercise / Bike / run /: after work
+badminton/squash : weekend
+20 pages of a book : commute
+A poetry read aloud : after dinner
+Jazz or classical raga: while at home
+Sing a song: night
+Play harmonica : night
+Prepare for OR, anatomy: evening once home or at TMH
+Revise WHO blue book 1 per day: evening at home
+Write academic / fiction: half hour before dinner
+R Emacs Python : half hour before dinner
+Think about blog / teaching blog / website
+
+Weekend: subscriptions and journal articles, also plan for daily article readings through the week so you don't spend time hunting what to read.
+
+* Lab,OPD,OR notes workflow ideas
+​Org notes with tagged headlines.
+
+Thoughts on organizing  notes: have one common org file with intelligent keyword tags like or, opd, os , es, sts, region, operative technique, nerve resection, translocation, etc
+
+Also add time stamps
+
+May be the structure like gct, ogs etc be parallel to OR and OPD notes, tagged with keywords for easy search, tagged MRN and time stamp, diagnosis or WHO diagnosis code
+
+* WorkFlow, structure GTD, DeepWork
+Eager curious , honest : With a good body of work under my belt.
+
+Exercise Meditate Sleep Eat
+
+Half hour accountability chart
+
+Structure work time and free time with GTD philosophy
+
+Write a paragraph every day
+
+R Bayes Emacs Python Article every day
+
+Sing / Harmonica / Piano
+
+Book to read everyday
+
+Movies / Journals / Subscriptions over the weekend.
+
+Fixed hours fixed work
+
+Free weekends
+
+Limit talks
+
+* Bayesian Books from stackexchange
+http://stats.stackexchange.com/questions/125/what-is-the-best-introductory-bayesian-statistics-textbook
+
+Probability Theory: The Logic of Science" by E.T. Jaynes.
+
+John Kruschke released a book in mid 2011 called Doing Bayesian Data Analysis: A Tutorial with R and BUGS.
+
+Sivia and Skilling, Data analysis: a Bayesian tutorial (2ed) 2006 246p 0198568320
+
+* DeepFocus Beyond Motivation
+​​Rapt attention and intense focus
+
+Structure your deep work aka Allen's GTD principle, break it down onto concrete parts
+
+Make half hourly blocks on left page and subtasks on right page
+
+Brian requires meaningful change not rest, except in sleep
+
+​For example when I am very tired, reading and focusing on Bayesian stst or genomics seems easier than on  paper to be written, I haven't entirely figured out why. But what it means is , as long as I have an interesting question focusing seems joyous, now what makes the process interesting, is it just pretentious novelty or does it add value. I hope it adds value and is not just a FB substitute, even if it is its a great substitute. Finding a link between how to find the intersting aspect to the tedium in front may be the to key to re energise oneself. More on this later.
+
+​The tallying of half hours really helps though.​​
+Avoid distractions and loops (where you keep thinking about an easy solution or success)
+
+Caro's organization, Seinfeld chain, Isaacsons Journalistic philosophy
+
+Don't rely on will power instead on rituals and habits
+
+Shallow distractions leach meaning and assume importance
+
+Schedule a time and build a habit.
+
+Don't pay too much heed to your feelings.
+
+Zero drafts where one doesn't care about quality, but the effort to be consistent for a few minutes or a few words every day.
+
+Also doing 15 mins of non sense every 1 hour. That's equal to watching a Seinfeld shot every hour for 45 mins of hard work.
+
+Writing a lot of crap without thinking and organizing later
+
+One day for admins, One day for ideas(non happenstance papers/work) the rest 3 days for work
+
+Exercise improves endurance to think and write
+
+Writing is a mode of thinking.
+
+Break down writing into small bits with hard targets and let them cohese into a whole
+
+* Avoiding Bad conversations
+​Step back
+
+Do not defend yourself
+
+Identify key issues and ask specific questions to which answers are needed
+
+Don't aimlessly wander into a agony aunt trap
+
+* pdfview in emacs
+https://www.emacswiki.org/emacs/DocViewMode​
+
+png suppport is usually available with base emacs
+
+download ghostscript
+
+put bin and lib directories in PATH
+
+make set ENV get ENV changes to .emacs
+
+add exec path
+
+disable global linum mode
+
+if need be can increase resolution of pdf
+
+Evaluate lisp or restart emacs
+
+Ctrl-x-f for any pdf now should open DocView mode and display pdf
+
+(add-to-list 'exec-path "C:/Users/nayakp/.emacs.d/gs9.19/bin")
+(setenv "PATH" (concat "C:\\Users\\nayakp\\.emacs.d\\gs9.19\\bin" ";"
+		       (getenv "PATH")))
+(setenv "PATH" (concat "C:\\Users\\nayakp\\.emacs.d\\gs19.9\\lib" ";"
+		       (getenv "PATH")))
+(setq doc-view-ghostscript-program "gswin64c")
+
+​​
+
+* Breaking Bad News
+What do you now about your illness?
+What would you want to know?
+Honesty balanced with realism.
+
+Truth telling is about facts and manner
+
+Paternalistic, beneficence, patient autonomy and self determination
+
+* R with OrgMode Emacs
+​http://orgmode.org/worg/org-contrib/babel/languages/ob-doc-R.html
+​
+http://orgmode.org/worg/sources/FIXME/ob-doc-R-extended.org​
+
+​Excellent tutorial
+
+http://orgmode.org/manual/Header-arguments.html#Header-arguments​
+
+
+Details about R source code blocks in Org mode
+* does /not/ produce a file since results says value graphics, so there is no output, explicit print, or implicit session command​
+​#+begin_src R :file 1.png :results value graphics
+library(lattice)
+xyplot(1:10 ~ 1:10)
+#+end_src
+
+* does produce a file, by printing object
+#+begin_src R :file 2.png :results value graphics
+library(lattice)
+print(xyplot(1:10 ~ 1:10))
+#+end_src
+
+* does produce a file, by using :results output​​
+#+begin_src R :file 3.png :results output graphics
+library(lattice)
+xyplot(1:10 ~ 1:10)
+#+end_src
+
+* does produce a file, by evaluating in :session
+#+begin_src R :file 4.png :session :results graphics
+library(lattice)
+xyplot(1:10 ~ 1:10)
+#+end_src
+
+​session maintains continuity between discrete code blocks
+​
+http://stats.blogoverflow.com/2011/08/using-emacs-to-work-with-r/
+
+Has good tip on keeping all functions in a seperate file that can be sourced (so functions are not a part of R output) If there is an error in your code then ESS shows a message in the minibuffer and you can investigate it by pressing C-c `
+
+http://pj.freefaculty.org/guides/Rcourse/emacs-ess/emacs-ess.pdf
+
+ Has good notes on Transcript file and .Rout from *R* buffer.
+
+;; At first, we make sure that our modifications in .emacs
+;; are applied _after_ default.el is read/
+(setq inhibit-default-init t)
+(load "default.el")
+;; We ensure that Emacs can copy from and to the clipboard
+(setq x-select-enable-clipboard t)
+
+;; Now we set up Emacs to find R
+;; The path to R might need to be changed
+(setq-default inferior-R-program-name
+		  "C:/Program Files/R/R-2.15.3/bin/i386/Rterm.exe")
+(setenv "PATH" (concat "C:\\Program Files\\R\\R-2.15.3\\bin\\i386" ";"
+	(getenv "PATH")))
+
+;; Configuring org mode to know about R and set some reasonable default behavior
+(require 'ess-site)
+(require 'org-install)
+(org-babel-do-load-languages
+  'org-babel-load-languages
+  '((R . t)
+   )
+)
+(add-hook 'org-babel-after-execute-hook 'org-display-inline-images)
+(add-hook 'org-mode-hook 'org-display-inline-images)
+(setq org-confirm-babel-evaluate nil)
+(setq org-export-html-validation-link nil)
+(setq org-export-allow-BIND t)
+(setq org-support-shift-select t)
+(setq org-src-fontify-natively t)
+
+* Structure of folders in the research paper
+Structure of folders in Research Folder
+todo
+done
+orgnotes
+bibtexpdfs
+pandoc-test
+rgit (r code )
+​Rspace which had csv files I didnt want to sync online to github​
+
+* Notes from Datacamp
+Dummy coding in R
+]
+# Regress salary against years and publications
+model <- lm(fs$salary ~ fs$years + fs$pubs)
+
+# Apply the summary function to get summarized results for model
+summary(model)
+
+# Compute the confidence intervals for model
+confint(model)
+
+# Create dummies for the categorical variable fs$dept by using the C() function
+dept_code <- C(fs$dept, treatment)
+
+# Regress salary against years, publications and department
+model_dummy <- lm(fs$salary ~ fs$years + fs$pubs + dept_code)
+
+# Apply the summary function to get summarized results for model_dummy
+summary(model_dummy)
+
+# Compute the confidence intervals for model_dummy
+confint(model_dummy)
+
+
+hflights%>%mutate(diff=TaxiOut-TaxiIn)%>%filter(!is.na(diff))%>%summarise(avg=mean(diff))
+
+is a translation of
+
+Take the hflights data set and then …
+Add a variable named diff that is the result of subtracting TaxiIn from TaxiOut, and then …
+Pick all of the rows whose diff value does not equal NA, and then …
+Summarise the data set with a value named avg that is the mean diff value.
+
+
+
+summarise(
+     mutate(
+        filter(
+            select(a,X,Y,Z),
+           X>Y),
+       Q=X+Y+Z),
+   all=sum(Q))
+)
+
+a%>%
+   select(X,Y,Z)%>%
+   filter(X>Y)%>%
+   mutate(Q=X+Y)%>%
+   summarise(all=sum(Q))  using the pipe vector %>% to make the code neat
+
+select/filter/mutate/summarise and arrange are the main verb functions in dplyr, it also has cool summarise function to be used with mean/max/sd/ etc
+also remember the pipe operator
+also remeber to use %in%c("American") for subsetting character vectors
+
+
+
+logical subsetting worls only for logical/int/complex not for character vectors
+hence the correct command is
+filter(hflights, UniqueCarrier %in% c("JetBlue", "Southwest", "Delta"))
+
+packages: readr data.table ,readxl,XLConnect,dplyr
+
+read_delim/read_csv/read_tsv with col_types="ccd_" , also has skip and n_max functiond for reading big data files.(if one uses skip, one needs to specify col_names=c()
+
+data.table has speed with fread() which reads sep and headers and col classes on its own
+
+readxl has read_xls and xlsx
+
+gdata has read.xls
+
+summary of functions and arguments from XLConneect
+library(XLConnect)
+my_book <- loadWorkbook("latitude.xlsx")
+
+# Create data frame: summ
+dims1 <- dim(readWorksheet(my_book, 1))
+dims2 <- dim(readWorksheet(my_book, 2))
+summ <- data.frame(sheets = getSheets(my_book),
+                   nrows = c(dims1[1], dims2[1]),
+                   ncols = c(dims1[2], dims2[2]))
+
+# Add a worksheet to my_book, named "data_summary"
+createSheet(my_book,name="data_summary")
+
+# Populate "data_summary" with summ data frame
+writeWorksheet(my_book,summ,sheet="data_summary")
+
+# Save workbook as latitude_with_summ.xlsx
+saveWorkbook(my_book,"latitude_with_summ.xlsx")
+ex1r <- hflights[c("TaxiIn","TaxiOut","Distance")]
+ex1d <- select(hflights, contains("Taxi"), Distance)
+
+ex2r <- hflights[c("Year","Month","DayOfWeek","DepTime","ArrTime")]
+ex2d <- select(hflights, Year:ArrTime, -DayofMonth)
+
+ex3r <- hflights[c("TailNum","TaxiIn","TaxiOut")]
+ex3d <- select(hflights,starts_with("T"))
+## the above code compares basic R with dplyr power
+
+​​​# Print out a tbl containing just ArrDelay and DepDelay
+select(hflights,ArrDelay,DepDelay)
+
+# Print out a tbl as described in the second instruction, using both helper functions and variable names
+select(hflights,UniqueCarrier,FlightNum,TailNum,Cancelled,CancellationCode)
+select(hflights,UniqueCarrier,FlightNum,TailNum,contains("Cancel"))
+
+# Print out a tbl as described in the third instruction, using only helper functions.
+select(hflights,contains("Time"),contains("Delay")​​)​
+
+* Exporting Org Mode links to Latex
+How to manage and export bibliographic notes/refs in org-mode
+Posted on 23/03/2012 by Olivier Berger
+I’ve felt the need to manage my bibliography with org-mode, allowing me to write drafts of papers while being able to keep a track of all the litterature I’ve read and published already.
+
+There are already many resources which explain how to integrate org-mode with reftex for instance, in order to cite papers inside org-mode, or how to link to biblographic references in bibtex format using org-bibtex.
+
+People have also posted hints on how to manage bibliographic notes inside an org-mode file, which would allow to keep a track of read papers, tag them, add comments, and link these notes to the bibtex file contents.
+
+But I couldn’t find a single comprehensive resource explaining if/how to manage links to such bibliographic notes that can both be navigated inside org-mode, and be exported to latex for previewing article drafts.
+
+Here’s a proposal in attempt to bind all these needs together.
+
+Let’s say we have one bibtex file ~/org/bibliography.bib which contains all the papers references.
+
+We’ll also add into ~/org/bibliography.org all the notes relating to these articles. These notes will be identified by CUSTOM_ID properties which will contain the bibliographic reference of the papers.
+
+Then we can create a draft in ~/org/draft.org which takes advantage of these.
+
+We can then use two new link prefixes, bib and note to create links to entries in the bibtex file and the corresponding bibliographic notes. These are based on the use of a specialrtcite link, that will be handled by a bit of emacs lisp.
+
+Provided that some code is added in the .emacs to treat link opening and latex export for these rtcite links, we now have a valid solution :
+
+clicking on a note:abibref link in an org-mode document will jump to the corresponding bibliographic note about a particular paper ‘abibref’ (a section in~/org/bibliography.org which has a :CUSTOM_ID: abibref property).
+clicking on bib:abibref link in an org-mode document will jump to the corresponding bibliographic reference in the bibtex file.
+exporting an org document containing either of the above links to LaTeX will produce correct references cite{abibref} LaTeX code (see the results here : draft.pdf).
+Details of the bibliographic notes contents (~/org/bibliography.org):
+
+#+LINK: bib rtcite:bibliography.bib::%s
+
+#+LINK: note rtcite:bibliography.org::#%s
+
+#+title: My bibliographic notes
+
+# \bibliography{bibliography}
+
+* My papers
+
+** 2005
+
+*** Why and how to contribute to libre software when you integrate them into an in-house application ?
+
+:PROPERTIES:
+:CUSTOM_ID: bac05why
+:END:
+
+[[bib:bac05why][BibTeX]] .
+
+/This is an interesting paper.../
+
+See also [[note:berger06integration]]
+
+In the above, note that note: links use rtcite links with a # character, which will allow jumping to the CUSTOM_ID property.
+
+Details of a paper draft (~/org/draft.org) :
+
+#+LINK: note rtcite:~/org/bibliography.org::#%s
+
+#+LINK: bib rtcite:~/org/bibliography.bib::%s
+
+#+title: How to mix org and bib for fun and profit
+#+author: Olivier Berger
+
+# \bibliography{bibliography}
+
+* Read a lot
+
+See [[note:bac05why][Why and how to contribute to libre software]] or [[bib:berger06integration]] .
+
+#+BIBLIOGRAPHY: bibliography plain limit:t
+
+Excerpts of the corresponding .emacs :
+
+(defun my-rtcite-export-handler (path desc format)
+  (message "my-rtcite-export-handler is called : path = %s, desc = %s, format = %s" path desc format)
+  (let* ((search (when (string-match "::#?\\(.+\\)\\'" path)
+                   (match-string 1 path)))
+         (path (substring path 0 (match-beginning 0))))
+    (cond ((eq format 'latex)
+           (if (or (not desc)
+                   (equal 0 (search "rtcite:" desc)))
+               (format "\\cite{%s}" search)
+             (format "\\cite[%s]{%s}" desc search))))))
+
+
+(require 'org)
+
+(org-add-link-type "rtcite"
+                   'org-bibtex-open
+                   'my-rtcite-export-handler)
+
+The above is an adapted version of a proposal sent to the org-mode list by Nick Dokos in a response to Andreas Willig : http://lists.gnu.org/archive/html/emacs-orgmode/2012-02/msg00640.html
+
+* Orgmode and Reftex
+Based on this link
+https://tincman.wordpress.com/2011/01/04/research-paper-management-with-emacs-org-mode-and-reftex/
+
+​Folder structure was
+~/research/todo/todo.org
+~/research/org/notes.org
+~/research/​todo/bibtest.bib
+
+Org mode and reftex mode are linked and startup together
+
+It helps to have one big  legacy bibtex and multiple smaller bib files based on individual projects.
+
+Article : will have Ctrl C [ linked to reftex citation, based on the link abbreviations, b will be purely for a bibtex citation, p will link to pdf and n will link to notes.org
+
+Notes.Org : looks like below, basically the main title or the parent could be the topic like Chemo in OGS with its tags, these tags will be inherited by the children . i added the \bibliography on the top of the org mode file to link it to the bib file. The link within the children is a reftex citation link with p abbreviation so that it directly opens the relevant pdf in an external viewer (I plan to customize this so it opens it within emacs or within qiqqa)
+
+The name of each pdf is renamed to its bibtex key to make regex searches easy within the bib file in reftex search mode. Custom tags and properties are added in the usual way. Adding the bibtex key as custom ID makes it easy to link it to the relevant child in the notes.org file from a reftex citation elsewhere
+
+​So i strat with a child whose title is the name of the paper , give it tags, do CTRL C [ and insert a reftex citation with p abbreviation so that link will open a pdf, I also add a custom ID of its bibtex key which I have copied from the bib file. The custom IDs and tags help efficient searching within relevant parents or children and their tags. It looks like this​
+
+
+​\bibliography{~/research/todo/bibtest.bib}
+* Error Metrics			   :tre:mre:fre:error:registration:rigidbody:
+** Predicting error					    :predictingerror:
+[[papers:fitzpatrick1998predicting][fitzpatrick1998predicting-paper]] rigid body registration pg 3 describes the math well with 2 relevant equations.
+   :PROPERTIES:
+   :CUSTOM_ID: fitzpatrick1998predicting
+** ISO accuracy in planning		:ISO:accuracy:planeplanning:accuracy:
+   :PROPERTIES:
+   :CUSTOM_ID: cartiaux2009accuracy
+   :END:
+** Registration accuracy inpelvic surgery		    :pelvic:accuracy:
+   :PROPERTIES:
+   :CUSTOM_ID: docquier2009registration
+   :END:​
+
+
+​Importantly the links have to configured to allow a smooth export of the org file to tex. Also it would be ideal to have the p link directly in the org mode file but not be exported to tex.​
+
+Alternatively one can do a regexp search of the bibtex key in the notes.org file and because the custom IDs are bibtex keys too, the search will point you the location from where a CTRL C Ctrl O will open the link to the relevant pdf.
+
+​Also to insert a new child heading under a parent just do Ctrl C[ and 'h' which will insert a heading with the bibtex key as custom ID and insert the paper link all in one key, so all you have to do is write your relevant notes in there!!
+
+Th basic emacs lisp code is pasted below, to be put in .emacs file or init.el file
+
+(defun org-mode-reftex-setup ()
+  (load-library "reftex")
+  (and (buffer-file-name) (file-exists-p (buffer-file-name))
+       (progn
+	 ;enable auto-revert-mode to update reftex when bibtex file changes on disk
+	 (global-auto-revert-mode t)
+	 (reftex-parse-all)
+	 ;add a custom reftex cite format to insert links
+	 (reftex-set-cite-format
+	  '((?b . "[[bib:%l][%l-bib]]")
+	    (?n . "[[notes:%l][%l-notes]]")
+	    (?p . "[[papers:%l][%l-paper]]")
+	    (?t . "%t")
+	    (?h . "** %t\n:PROPERTIES:\n:Custom_ID: %l\n:END:\n[[papers:%l][%l-paper]]")))))
+  (define-key org-mode-map (kbd "C-c )") 'reftex-citation)
+  (define-key org-mode-map (kbd "C-c (") 'org-mode-reftex-search))
+
+(add-hook 'org-mode-hook 'org-mode-reftex-setup)​
+
+(defun org-mode-reftex-search ()
+  ;;jump to the notes for the paper pointed to at from reftex search
+  (interactive)
+  (org-open-link-from-string (format "[[notes:%s]]" (first (reftex-citation t)))))
+​Lastly, org-mode needs a few things to pull all this together. The first and most important is importing the bibtex file. RefTeX looks for a LaTeX \bibliography tag anywhere in the file, I place mine as an org-mode comment at the start of the file
+# \bibliography{~/research/refs.bib}
+The other thing needed is link abbreviations. While you could hardcode this into your citation formats, I prefer to put abbreviations in for the citation formats, and define defaults elsewhere in my init.el
+
+(setq org-link-abbrev-alist
+      '(("bib" . "~/research/refs.bib::%s")
+	("notes" . "~/research/org/notes.org::#%s")
+	("papers" . "~/research/papers/%s.pdf")))
+These can be easily overridden in an org-mode file, which I actually do for the org-mode file I store the actual entries in. If I left it as is, following a “notes” link in this org-mode file would open the same file in a new window and jump to the entry in that one. Not quite what we want. This is where I override it in the local file by adding this to my heading.
+
+#+LINK: notes #%s
+Now, if I follow a “notes” link in the entries file, it jumps to that entry in the same frame, while following a “notes” link in another org-mode file (or using my new reftex search addition) will open this file in a new frame and jump to the entry.​
+*
+
+
+
+
+
+
+
+
+
+
+
+
+
